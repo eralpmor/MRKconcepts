@@ -39,10 +39,17 @@ section {
 
 .heading {
     background: #e1cec7;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 5rem 0;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     margin: 2%;
     border-radius: 3rem;
 }
@@ -647,11 +654,6 @@ section {
 .banner-container .banner .content .btn {
     padding: .7rem 2.5rem;
 }
-
-
-
-
-
     /* ---- banner section end ---- */
 
 /* home page end */
@@ -659,24 +661,355 @@ section {
 
 /* shop page start */
 
-    /* ---- categories ---- */
+    /* ---- categories start---- */
+.category .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(16rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit,minmax(16rem, 1fr));
+    gap: 1.5rem;
+}
 
-    /* ---- product section ---- */
+.category .box-container .box {
+    padding: 2rem;
+    text-align: center;
+    border-radius: 2rem;
+    background: #f0e8e4;
+}
 
+.category .box-container .box:hover {
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+}
+
+.category .box-container .box:hover img {
+    transform: translateY(-3px);
+}
+
+.category .box-container .box img {
+    height: 6rem;
+    margin-bottom: 1rem;
+}
+
+.category .box-container .box h3 {
+    font-size: 1.7rem;
+    color: #5e473e;
+}
+    /* ---- categories end ---- */
+    /* ---- product section start ---- */
+.products .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(26rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit,minmax(26rem, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 3rem;
+    background-color: #f0e8e4;
+}
+
+.products .box-container .box {
+    position: relative;
+    background: #f5eeeb;
+    overflow: hidden;
+    border-radius: 2rem;
+    border: 0.1rem solid #caab9f;
+}
+
+.products .box-container .box:hover .image img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.products .box-container .box:hover .icons {
+    top: 0;
+}
+
+.products .box-container .box .icons {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 30rem;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: .5rem;
+    background: rgba(242,242,242,0.7);
+    z-index: 10;
+}
+
+.products .box-container .box .icons a {
+    text-align: center;
+    height: 5rem;
+    line-height: 5rem;
+    width: 5rem;
+    background: #e1cec7;
+    color: #5e473e;
+    border-radius: 50%;
+    font-size: 2rem;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.products .box-container .box .icons a:hover {
+    background: #5e473e;
+    color: #e1cec7;
+
+}
+
+.products .box-container .box .image {
+    height: 30rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.products .box-container .box .image img {
+    height: 30rem;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.products .box-container .box .content {
+    padding: 1.5rem 2rem;
+}
+
+.products .box-container .box .content .price {
+    font-size: 1.3rem;
+    color: #b58d7e;
+}
+
+.products .box-container .box .content h3 {
+    font-size: 2rem;
+    color: #5e473e;
+    padding: .5rem 0;
+}
+
+.products .box-container .box .content .stars {
+    font-size: 1.3rem;
+}
+
+.products .box-container .box .content .stars i {
+    color: gold;
+}
+
+.products .box-container .box .content .stars span {
+    color: #b58d7e;
+}
+    /* ---- product section end ---- */
 /* shop page end */
 
 
 /* about page start */
+    /* ---- about section start ---- */
+.about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2%;
+    border-radius: 3rem;
+    background-color: #f0e8e4;
+}
 
-    /* ---- about section ---- */
+.about .image {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+    flex: 1 1 40rem;
+}
 
-    /* ---- services section ---- */
+.about .image img {
+    border-radius: 2rem;
+    width: 100%;
+}
 
+.about .content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+    flex: 1 1 40rem;
+}
+
+.about .content span {
+    font-size: 1.5rem;
+    color: #b58d7e;
+}
+
+.about .content h3 {
+    font-size: 2rem;
+    color: #5e473e;
+    padding: 1rem;
+}
+
+.about .content p {
+    font-size: 1.1rem;
+    color: #b58d7e;
+    padding: 1rem 0;
+    line-height: 2;
+}
+    /* ---- about section end ---- */
+
+    /* ---- services section start ---- */
+.services .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.services .box-container .box {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f0e8e4;
+    border-radius: 2rem;
+}
+
+.services .box-container .box:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.services .box-container .box:hover img {
+    transform: translateY(-3px);
+}
+
+.services .box-container .box img {
+    font-size: 8rem;
+    margin-bottom: 1rem;
+}
+
+.services .box-container .box h3 {
+    font-size: 2.2rem;
+    color: #5e473e;
+}
+
+.services .box-container .box p {
+    font-size: 1.4rem;
+    color: #b58d7e;
+    line-height: 2;
+    padding: 1rem 0;
+}
+    /* ---- services section end ---- */
 /* about page end */
 
 
 /* team page start */
+.team .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns:(minmax(30rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 3rem;
+    background-color: #f0e8e4;
+}
 
+.team .box-container .box {
+    position: relative;
+    overflow: hidden;
+    border: 0.1rem solid #caab9f;
+    border-radius: 2rem;
+    background-color: #f5eeeb;
+}
+
+.team .box-container .box:hover .image img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.team .box-container .box:hover .share {
+    left: 0;
+}
+
+.team .box-container .box .share {
+    width: 7rem;
+    height: 47.5rem;
+    position: absolute;
+    top: 1%;
+    left: -8.5rem;
+    z-index: 10;
+    margin: 2%;
+    margin-left: 3.5%;
+    border-radius: 1.5rem;
+    background: #f0e8e4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: .7rem;
+}
+
+.team .box-container .box .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2.2rem;
+    color: #5e473e;
+    background: #e1cec7;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.team .box-container .box .share a:hover {
+    color: #e1cec7;
+    background: #5e473e;
+}
+
+.team .box-container .box .image {
+    height: 50rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.team .box-container .box .image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.team .box-container .box .user {
+    padding: 1rem 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.team .box-container .box .user h3 {
+    font-size: 2rem;
+    color: #5e473e;
+}
+
+.team .box-container .box .user span {
+    font-size: 1.5rem;
+    color: #b58d7e;
+}
 /* team page end */
 
 
