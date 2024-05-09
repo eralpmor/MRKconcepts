@@ -1015,10 +1015,149 @@ section {
 
 /* blog page start */
 
+.blog .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 3rem;
+    background-color: #f0e8e4;
+}
+
+.blog .box-container .box {
+    border: 0.1px solid #caab9f;
+    border-radius: 2rem;
+    background: #f5eeeb;
+}
+
+.blog .box-container .box:hover .image img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.blog .box-container .box .image {
+    height: 25rem;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.blog .box-container .box .image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.blog .box-container .box .content {
+    padding: 1.5rem 2rem;
+}
+
+.blog .box-container .box .content h3 {
+    font-size: 2rem;
+    color: #5e473e;
+}
+
+.blog .box-container .box .content p {
+    font-size: 1.4rem;
+    color: #b58d7e;
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+.blog .box-container .box .content .icons {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 0.1rem solid #5e473e;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.blog .box-container .box .content .icons a {
+    font-size: 1.4rem;
+    color: #b58d7e;
+}
+
+.blog .box-container .box .content .icons a:hover {
+    color: #9e7464;
+}
+
+.blog .box-container .box .content .icons a i {
+    padding-right: .5rem;
+    color: #5e473e;
+}
+
 /* blog page end */
 
 
 /* contact page start */
+.contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+}
+
+.contact form {
+    padding: 3rem;
+    margin: 2%;
+    border-radius: 3rem;
+    background: #f0e8e4;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+    flex: 1 1 40rem;
+}
+
+.contact form h3 {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    color: #5e473e;
+    font-size: 1.6rem;
+}
+
+.contact form span {
+    display: block;
+    padding-bottom: 1rem;
+    color: #b58d7e;
+    font-size: 1.6rem;
+}
+
+.contact form .box {
+    width: 100%;
+    background: none;
+    border-bottom: 0.1rem solid #5e473e;
+    font-size: 1.6rem;
+    color: #5e473e;
+    text-transform: none;
+    padding: .5rem 0;
+    margin-bottom: 1rem;
+}
+
+.contact form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+.contact .map {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+    flex: 1 1 40rem;
+    width: 100%;
+    margin: 2%;
+    border-radius: 3rem;
+}
+
 
 /* contact page end */
 
@@ -1098,10 +1237,67 @@ section {
     border-radius: 3rem;
 }
 
-
 /* footer end */
 
 
 /* responsive start */
+
+@media screen and (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 2rem;
+    }
+    section {
+        padding: 3rem 2rem;
+    }
+    .home {
+        padding: 3rem 2rem;
+    }
+    .home #slide-next,
+    .home #slide-prev {
+        top: 95%;
+    }
+    .home #slide-prev {
+        left: auto;
+        right: 8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #search-btn {
+        display: inline-block;
+    }
+    .header .search-form {
+        position: absolute;
+        height: 8rem;
+        top: -101%;
+        left: 2%;
+        right: 2.2%;
+        /*width: 100%;*/
+        border-radius: 3rem 3rem 0.75rem 0.75rem;
+        background: #eae0dc;
+    }
+    .header .search-form.active {
+        top: 110%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .home .slides-container .slide .content h3 {
+        font-size: 4rem;
+    }
+    .heading {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        gap: 1rem;
+    }
+}
 
 /* responsive end */
