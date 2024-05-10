@@ -1301,3 +1301,39 @@ section {
 }
 
 /* responsive end */
+
+
+
+.product-gallery {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2%;
+    border-radius: 3rem;
+    background-color: #f0e8e4;
+}
+
+.product-thumbnails {
+    flex: 1 1 40rem;
+    max-width: 40rem; /* İstediğiniz maksimum genişlik */
+    overflow: hidden; /* İçeriği sığdır */
+}
+
+.product-thumbnails img {
+    border-radius: 2rem;
+    width: 100%;
+}
+
+.product-viewer {
+    flex: 1 1 calc(60% - 2rem); /* Sağ tarafın esnek genişlik ayarı */
+    max-width: calc(60% - 2rem); /* Sağ tarafın maksimum genişlik ayarı */
+    margin-left: 2rem; /* Sağ tarafta boşluk bırakmak için */
+}
+
+.product-viewer iframe {
+    width: 100%;
+    height: 400px; /* İstediğiniz yükseklik */
+    border: none;
+}
+
