@@ -1282,6 +1282,17 @@ section {
     .header .search-form.active {
         top: 110%;
     }
+    .product-thumbnails {
+        flex: 1 1 40rem; 
+        max-width: 40rem;
+        margin-bottom: 0; 
+    }
+
+    .product-viewer {
+        flex: 1 1 calc(60% - 2rem); 
+        max-width: calc(60% - 2rem); 
+        margin-left: 2rem; 
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -1302,11 +1313,10 @@ section {
 
 /* responsive end */
 
-
-
 .product-gallery {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
     margin: 2%;
@@ -1315,9 +1325,9 @@ section {
 }
 
 .product-thumbnails {
-    flex: 1 1 40rem;
-    max-width: 40rem; /* İstediğiniz maksimum genişlik */
-    overflow: hidden; /* İçeriği sığdır */
+    flex: 1 1 100%;
+    max-width: 100%; 
+    margin-bottom: 2rem; 
 }
 
 .product-thumbnails img {
@@ -1326,14 +1336,12 @@ section {
 }
 
 .product-viewer {
-    flex: 1 1 calc(60% - 2rem); /* Sağ tarafın esnek genişlik ayarı */
-    max-width: calc(60% - 2rem); /* Sağ tarafın maksimum genişlik ayarı */
-    margin-left: 2rem; /* Sağ tarafta boşluk bırakmak için */
+    flex: 1 1 100%; 
+    max-width: 100%;
 }
 
 .product-viewer iframe {
     width: 100%;
-    height: 400px; /* İstediğiniz yükseklik */
+    height: 400px;
     border: none;
 }
-
